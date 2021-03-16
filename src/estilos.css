@@ -1,0 +1,782 @@
+/*Classes globais*/
+
+* {
+    margin:0;
+    padding: 0;
+}
+
+img {   
+    max-width: 100%;   
+    height: auto;
+}
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus {   
+  outline: 0 none;
+}
+
+
+.form-control:focus{
+    -webkit-box-shadow: none; 
+    -moz-box-shadow: none;
+    box-shadow: none; 
+}
+  
+
+.row{
+	margin:0;
+	padding:0;	
+}
+
+:root {
+    --azul-banpara: #3f32ab;
+    --azul-banpara-2: #5d4bfa;
+    --azul-banpara-3: #0f5ef7;
+    --azul-banpara-4: #7262fc;
+    --azul-renda-para: #003d8b;
+    --vermelho-renda-para: #cc272f;
+    --vermelho-banpara: #ff5b5b;
+    --vermelho-banpara-2: #fa4b4b;
+    --dark-banpara: #1e242b;
+  }
+
+.cor-azul{
+    color: var(--azul-banpara);
+}
+
+.cor-azul-2{
+    color: var(--azul-banpara-2);
+}
+
+
+.rubik{
+    font-family: 'Rubik', sans-serif;
+}
+
+
+.quicksand{
+    font-family: 'Quicksand', sans-serif;
+}
+
+.montserrat{
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.vermelho{
+    border: solid 2px red;
+}
+
+.height-13{
+    height: 13px;
+}
+
+
+
+
+@font-face {
+    font-family: "Neue Plak";
+    src: url(webfonts/Neue\ Plak\ W05\ Condensed\ Black.otf);
+}
+
+@font-face {
+    font-family: "Neue Plak Condensed";
+    src: url(webfonts/56ff5664b404dd058966742031de55f5.woff);
+}
+
+
+
+.fw-300 {
+    font-weight: 300;
+}
+
+.fw-400 {
+    font-weight: 400 !important;
+}
+
+.fw-500 {
+    font-weight: 500;
+}
+
+.fw-600 {
+    font-weight: 600;
+}
+
+.font-8 {
+    font-size: 8px;
+}
+
+.font-10 {
+    font-size: 10px;
+}
+
+.font-12 {
+    font-size: 12px;
+}
+
+.font-14 {
+    font-size: 14px;
+}
+
+.font-16 {
+    font-size: 16px;
+}
+
+.font-18 {
+    font-size: 18px;
+}
+
+.font-20 {
+    font-size: 20px; 
+}
+
+
+.sombra3{
+    -webkit-box-shadow: 0px 0px 15px -8px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0px 0px 15px -8px rgba(0,0,0,0.3);
+    box-shadow: 0px 0px 15px -8px rgba(0,0,0,0.3);                           
+}
+
+.sombra4{
+    box-shadow: rgba(50, 50, 93, 0.23) 0px 20px 100px -20px, rgba(0, 0, 0, 0.15) 0px 10px 40px -30px;
+    -moz-box-shadow: rgba(50, 50, 93, 0.23) 0px 20px 100px -20px, rgba(0, 0, 0, 0.15) 0px 10px 40px -30px;
+    -webkit-box-shadow: rgba(50, 50, 93, 0.23) 0px 20px 100px -20px, rgba(0, 0, 0, 0.15) 0px 10px 40px -30px;
+}
+
+.sombra5{
+    -webkit-box-shadow: 0px 5px 13px -1px rgba(0,0,0,0.1);
+-moz-box-shadow: 0px 5px 13px -1px rgba(0,0,0,0.1);
+box-shadow: 0px 5px 13px -1px rgba(0,0,0,0.1);
+}
+
+.noborder{
+    border: none;
+}
+
+.nolink{
+    text-decoration: none;
+}
+
+.branco{
+    background: white;
+}
+
+.cinza{
+    background-color: #f7f7f7;
+}
+
+.cinza-2{
+    background-color: #ebebeb;
+}
+
+.display-block{
+    display: block;
+}
+
+
+/* Demais classes */
+
+.logo-banpara{
+    height:45px;
+    margin-left:20px
+}
+
+.badge-vermelho{
+    padding: 5px 10px 5px 10px;
+    border-radius: 2px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    background-color: #f9e3e3;
+    color: var(--vermelho-banpara);
+}
+
+.badge-azul{
+    padding: 5px 10px 5px 10px;
+    border-radius: 2px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    background-color: #ebf5ff;
+    color: var(--azul-banpara);
+}
+
+
+.badge-preto{
+    padding: 5px 10px 5px 10px;
+    border-radius: 2px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    background-color: #e0e1e0;
+    color: #404040;
+}
+
+.numero-dash{
+    font-size: 24px;
+    font-weight: 600 !important;
+    text-align: center;
+    line-height: 1;
+    letter-spacing: 1.2px;
+    font-family: 'Rubik', sans-serif !important;
+    word-wrap: break-word;
+}
+
+.titulo-dash{
+    font-size: 10px;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 5px;
+    line-height: 1;
+    letter-spacing: 1.2px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+}
+
+.numero-dash-2{
+    font-size: 24px;
+    font-weight: 300;
+    text-align: center;
+    line-height: 1;
+    letter-spacing: 1.2px;
+    font-family: 'Rubik', sans-serif;
+}
+
+.porc-dash{
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    line-height: 1;
+    letter-spacing: 1.2px;
+    font-family: 'Rubik', sans-serif;
+}
+
+.icone-dash{
+    height: 20px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.icone-dash-2{
+    height: 15px;
+}
+
+.icone-dash-3{
+    height: 20px;
+}
+
+.teste{
+    background: rgb(88,96,197);
+    background: -moz-linear-gradient(137deg, rgba(88,96,197,1) 0%, rgba(55,50,174,1) 68%);
+    background: -webkit-linear-gradient(137deg, rgba(88,96,197,1) 0%, rgba(55,50,174,1) 68%);
+    background: linear-gradient(137deg, rgba(88,96,197,1) 0%, rgba(55,50,174,1) 68%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#5860c5",endColorstr="#3732ae",GradientType=1);
+    color: white;
+    border-radius: 10px;
+}
+
+
+.bg-azul-2{
+    background-color: var(--azul-banpara-2);
+}
+
+.bg-azul-3{
+    background-color: var(--azul-renda-para);
+}
+
+.titulo-item-dash{
+    display: block;
+    font-size: 10px;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 5px;
+    line-height: 1;
+    letter-spacing: 1.2px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+}
+
+.descricao-consulta{
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    line-height: 1.3;
+    letter-spacing: 1.2px;
+    font-family: 'Rubik', sans-serif;
+    margin-top: 5px;
+    text-transform: capitalize !important;
+}
+
+.resultado{
+    font-size: 12px;
+    font-weight: 300;
+    text-align: center;
+    line-height: 1.3;
+    letter-spacing: 1.2px;
+    font-family: 'Rubik', sans-serif;
+    text-transform: capitalize !important;
+}
+
+.resultado-nome{
+    font-size: 12px;
+    font-weight: 400;
+    text-align: center;
+    line-height: 1.3;
+    letter-spacing: 1.2px;
+    font-family: 'Rubik', sans-serif;
+    text-transform: capitalize !important;
+}
+
+.titulo-consulta{
+    font-size: 10px;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 5px;
+    line-height: 1;
+    letter-spacing: 1.2px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+}
+
+.card-renda{
+    border-radius: 8px !important;
+    border-top: 3px solid #1460c4;
+}
+
+.botao-collapse{
+    text-decoration: none;
+    background-color: white;
+    border: none;
+    color: black;
+    cursor: pointer;
+    padding-top: .25rem;
+    padding-bottom: .25rem;
+    font-weight: 300;
+    font-size: 16px;
+    font-family: 'Rubik', sans-serif;
+}
+
+.botao-collapse:hover{
+    text-decoration: none;
+    color: black;
+}
+
+.conteudo-faq{
+    font-weight: 300;
+    margin-bottom: .75rem;
+    font-size: 14px;
+    font-family: 'Rubik', sans-serif;
+}
+
+.botao-form{
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-size: 12px;
+    background-color: var(--azul-banpara-3);
+    border-color: var(--azul-banpara-3);
+    font-family: 'Rubik', sans-serif;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.botao-calendario{
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-size: 12px;
+    background-color: var(--dark-banpara);
+    border-color: var(--dark-banpara);
+    font-family: 'Rubik', sans-serif;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.titulo-renda{
+    font-family: 'Neue Plak Condensed';
+    font-size: 50px;
+    color: white;
+    letter-spacing: 1.5px;
+    line-height: 1;
+}
+
+.subtitulo-renda{
+    font-family: 'Neue Plak Condensed';
+    font-size: 28px;
+    color: white;
+    line-height: 1;
+    text-align: center;
+}
+
+.subtitulo-renda-2{
+    font-family: 'Neue Plak Condensed';
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    color: white;
+    line-height: 1;
+}
+
+.subtitulo-renda-3{
+    font-family: 'Neue Plak Condensed';
+    font-size: 20px;
+    letter-spacing: 1.5px;
+    color: black;
+    line-height: 1; 
+    text-align: center;
+    margin-top: 10px;
+}
+
+.faixa-renda{
+    background-color: #cc272f;
+    padding-top: 8px;
+    padding-bottom: 14px;
+}
+
+.content-faixa-renda{
+    font-family: 'Neue Plak Condensed';
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 2px;
+    color: white;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.label-input{
+    font-family: 'Neue Plak Condensed';
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    color: black;
+    line-height: 1;
+}
+
+.texto-footer{
+    font-family: 'Neue Plak Condensed';
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: black;
+    line-height: 1;
+    text-align: center;
+}
+
+
+
+.header-tabela{
+    font-family: 'Neue Plak Condensed';
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: white;
+    line-height: 1.2;
+    text-align: center;
+    background-color: var(--azul-renda-para);
+}
+
+.texto-tabela{
+    font-family: 'Montserrat';
+    font-size: 12px;
+    color: black;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.no-b-top{
+    border-top: 0 !important;
+}
+
+
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    .titulo-renda{
+        font-family: 'Neue Plak Condensed';
+        font-size: 60px;
+        color: white;
+        line-height: 1;
+        letter-spacing: 1.5px;
+    }
+    
+    .subtitulo-renda{
+        font-family: 'Neue Plak Condensed';
+        font-size: 30px;
+        color: white;
+        line-height: 1;
+        text-align: center;
+    }
+    
+    .subtitulo-renda-2{
+        font-family: 'Neue Plak Condensed';
+        font-size: 14px;
+        letter-spacing: 1.5px;
+        color: white;
+        line-height: 1;
+    }
+    
+    .subtitulo-renda-3{
+        font-family: 'Neue Plak Condensed';
+        font-size: 20px;
+        letter-spacing: 1.5px;
+        color: black;
+        line-height: 1; 
+        text-align: center;
+        margin-top: 10px;
+    }
+    
+    .faixa-renda{
+        background-color: #cc272f;
+        padding-top: 8px;
+        padding-bottom: 14px;
+    }
+    
+    .content-faixa-renda{
+        font-family: 'Neue Plak Condensed';
+        text-transform: uppercase;
+        font-size: 16px;
+        letter-spacing: 2px;
+        color: white;
+        line-height: 1;
+        text-align: center;
+    }
+    
+    .label-input{
+        font-family: 'Neue Plak Condensed';
+        font-size: 14px;
+        letter-spacing: 1.5px;
+        color: black;
+        line-height: 1;
+    }
+    
+    .texto-footer{
+        font-family: 'Neue Plak Condensed';
+        text-transform: uppercase;
+        font-size: 14px;
+        letter-spacing: 2px;
+        color: black;
+        line-height: 1;
+        text-align: center;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .titulo-renda{
+        font-family: 'Neue Plak Condensed';
+        font-size: 60px;
+        color: white;
+        line-height: 1;
+        letter-spacing: 1.5px;
+    }
+    
+    .subtitulo-renda{
+        font-family: 'Neue Plak Condensed';
+        font-size: 40px;
+        color: white;
+        line-height: 1;
+        text-align: center;
+    }
+    
+    .subtitulo-renda-2{
+        font-family: 'Neue Plak Condensed';
+        font-size: 14px;
+        letter-spacing: 1.5px;
+        color: white;
+        line-height: 1;
+    }
+    
+    .subtitulo-renda-3{
+        font-family: 'Neue Plak Condensed';
+        font-size: 20px;
+        letter-spacing: 1.5px;
+        color: black;
+        line-height: 1; 
+        text-align: center;
+    }
+    
+    .faixa-renda{
+        background-color: #cc272f;
+        padding-top: 8px;
+        padding-bottom: 14px;
+    }
+    
+    .content-faixa-renda{
+        font-family: 'Neue Plak Condensed';
+        text-transform: uppercase;
+        font-size: 18px;
+        letter-spacing: 2px;
+        color: white;
+        line-height: 1;
+        text-align: center;
+    }
+    
+    .label-input{
+        font-family: 'Neue Plak Condensed';
+        font-size: 14px;
+        letter-spacing: 1.5px;
+        color: black;
+        line-height: 1;
+    }
+    
+    .texto-footer{
+        font-family: 'Neue Plak Condensed';
+        text-transform: uppercase;
+        font-size: 14px;
+        letter-spacing: 2px;
+        color: black;
+        line-height: 1;
+        text-align: center;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .titulo-renda{
+        font-family: 'Neue Plak Condensed';
+        font-size: 60px;
+        color: white;
+        line-height: 1;
+        letter-spacing: 1.5px;
+    }
+    
+    .subtitulo-renda{
+        font-family: 'Neue Plak Condensed';
+        font-size: 40px;
+        color: white;
+        line-height: 1;
+        text-align: center;
+    }
+    
+    .subtitulo-renda-2{
+        font-family: 'Neue Plak Condensed';
+        font-size: 14px;
+        letter-spacing: 1.5px;
+        color: white;
+        line-height: 1;
+    }
+    
+    .subtitulo-renda-3{
+        font-family: 'Neue Plak Condensed';
+        font-size: 20px;
+        letter-spacing: 1.5px;
+        color: black;
+        line-height: 1; 
+        text-align: center;
+    }
+    
+    .faixa-renda{
+        background-color: #cc272f;
+        padding-top: 8px;
+        padding-bottom: 14px;
+    }
+    
+    .content-faixa-renda{
+        font-family: 'Neue Plak Condensed';
+        text-transform: uppercase;
+        font-size: 18px;
+        letter-spacing: 2px;
+        color: white;
+        line-height: 1;
+        text-align: center;
+    }
+    
+    .label-input{
+        font-family: 'Neue Plak Condensed';
+        font-size: 14px;
+        letter-spacing: 1.5px;
+        color: black;
+        line-height: 1;
+    }
+    
+    .texto-footer{
+        font-family: 'Neue Plak Condensed';
+        text-transform: uppercase;
+        font-size: 14px;
+        letter-spacing: 2px;
+        color: black;
+        line-height: 1;
+        text-align: center;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .titulo-renda{
+        font-family: 'Neue Plak Condensed';
+        font-size: 60px;
+        color: white;
+        line-height: 1;
+        letter-spacing: 1.5px;
+    }
+    
+    .subtitulo-renda{
+        font-family: 'Neue Plak Condensed';
+        font-size: 40px;
+        color: white;
+        line-height: 1;
+        text-align: center;
+    }
+    
+    .subtitulo-renda-2{
+        font-family: 'Neue Plak Condensed';
+        font-size: 14px;
+        letter-spacing: 1.5px;
+        color: white;
+        line-height: 1;
+    }
+    
+    .subtitulo-renda-3{
+        font-family: 'Neue Plak Condensed';
+        font-size: 20px;
+        letter-spacing: 1.5px;
+        color: black;
+        line-height: 1; 
+        text-align: center;
+    }
+    
+    .faixa-renda{
+        background-color: #cc272f;
+        padding-top: 8px;
+        padding-bottom: 14px;
+    }
+    
+    .content-faixa-renda{
+        font-family: 'Neue Plak Condensed';
+        text-transform: uppercase;
+        font-size: 18px;
+        letter-spacing: 2px;
+        color: white;
+        line-height: 1;
+        text-align: center;
+    }
+    
+    .label-input{
+        font-family: 'Neue Plak Condensed';
+        font-size: 14px;
+        letter-spacing: 1.5px;
+        color: black;
+        line-height: 1;
+    }
+    
+    .texto-footer{
+        font-family: 'Neue Plak Condensed';
+        text-transform: uppercase;
+        font-size: 14px;
+        letter-spacing: 2px;
+        color: black;
+        line-height: 1;
+        text-align: center;
+    }
+}
