@@ -551,14 +551,16 @@ function Main() {
                               <div className="col-12 p-0 descricao-consulta">
                                 {cliente.atividade}
                               </div>
+                            </div>
 
+                            <div className="col-md-6 p-0">
                               <div className="col-12 titulo-consulta mt-3">
                                 Valor:
                               </div>
                               <div className="col-12 p-0 descricao-consulta">
                                 <span className="font-14 fw-400">R$</span>
                                 <span style={{ fontSize: 26 }}>
-                                  {cliente.valor}
+                                  {cliente.valor},00
                                 </span>
                               </div>
                             </div>
@@ -579,7 +581,7 @@ function Main() {
                             </div>
                             <div className="col-12 descricao-consulta">
                               <span className="font-14 fw-400">R$</span>
-                              <span style={{ fontSize: 26 }}>100</span>
+                              <span style={{ fontSize: 26 }}>100,00</span>
                             </div>
                           </div>
                         )}
