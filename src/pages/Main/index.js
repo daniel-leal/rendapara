@@ -241,6 +241,7 @@ function Main() {
                 </table>
               </div>
             </section>
+
             <section className="row">
               <div className="col-12 subtitulo-renda" style={{ color: '#000' }}>
                 <span>Renda Pará 500</span>
@@ -264,7 +265,7 @@ function Main() {
                         Janeiro
                       </td>
                       <td className="text-center align-middle no-b-top">
-                        01 a 05 de Abril
+                        01 e 05 de Abril
                       </td>
                     </tr>
                     <tr>
@@ -358,7 +359,7 @@ function Main() {
                         Setembro
                       </td>
                       <td className="text-center align-middle no-b-top">
-                        27 de Abril a 03 de Maio
+                        27 de Abril e 03 de Maio
                       </td>
                     </tr>
                     <tr>
@@ -392,6 +393,7 @@ function Main() {
           </div>
         </Modal.Body>
       </Modal>
+
       <section className="row py-5 gd-renda-para">
         <div className="col-12 p-0 d-flex justify-content-center">
           <div className="col-8 col-sm-4 col-md-3 col-lg-3 col-xl-2">
@@ -399,14 +401,14 @@ function Main() {
           </div>
         </div>
 
-        <div className="col-md-10 offset-md-1 col-lg-8 offset-lg-2 mt-3 texto-descricao-renda-para">
+        {/* <div className="col-md-10 offset-md-1 col-lg-8 offset-lg-2 mt-3 texto-descricao-renda-para">
           O Programa, regulamentado por meio de lei estadual, representa um
           incremento no orçamento das famílias em situação de vulnerabilidade
           social, cadastradas no{' '}
           <span className="font-weight-bold">Bolsa Família</span>. Para cada
           pessoa beneficiada, é pago o valor de R$ 100, em cota única, em
           agências do <span className="font-weight-bold">Banpará.</span>
-        </div>
+        </div> */}
         <div className="col-12 text-center mt-4">
           <span className="span-title-consulta">Realizado por:</span>
         </div>
@@ -539,23 +541,48 @@ function Main() {
                                 )}
                           </div>
                         </div>
-                        <div className="col-md-12 p-o">
-                          <div className="col-12 titulo-consulta mt-3">
-                            Valor:
+
+                        {cliente.atividade ? (
+                          <>
+                            <div className="col-md-6 p-0">
+                              <div className="col-12 titulo-consulta mt-3">
+                                Atividade:
+                              </div>
+                              <div className="col-12 p-0 descricao-consulta">
+                                {cliente.atividade}
+                              </div>
+
+                              <div className="col-12 titulo-consulta mt-3">
+                                Valor:
+                              </div>
+                              <div className="col-12 p-0 descricao-consulta">
+                                <span className="font-14 fw-400">R$</span>
+                                <span style={{ fontSize: 26 }}>
+                                  {cliente.valor}
+                                </span>
+                              </div>
+                            </div>
+
+                            <div className="col-md-12 col-lg-8 offset-md-2 alert alert-warning mt-3 p-0 py-3">
+                              <div className="col-12 titulo-consulta font-weight-bold">
+                                DOCUMENTAÇÃO NECESSÁRIA PARA SAQUE:
+                              </div>
+                              <div className="col-12 titulo-consulta">
+                                {cliente.documentacao}
+                              </div>
+                            </div>
+                          </>
+                        ) : (
+                          <div className="col-md-12 p-o">
+                            <div className="col-12 titulo-consulta mt-3">
+                              Valor:
+                            </div>
+                            <div className="col-12 descricao-consulta">
+                              <span className="font-14 fw-400">R$</span>
+                              <span style={{ fontSize: 26 }}>100</span>
+                            </div>
                           </div>
-                          <div className="col-12 descricao-consulta">
-                            <span className="font-14 fw-400">R$</span>
-                            <span style={{ fontSize: 26 }}>100,00</span>
-                          </div>
-                        </div>
-                        <div className="col-md-12 col-lg-8 offset-md-2 alert alert-warning mt-3 p-0 py-3">
-                          <div className="col-12 titulo-consulta font-weight-bold">
-                            DOCUMENTAÇÃO NECESSÁRIA PARA SAQUE:
-                          </div>
-                          <div className="col-12 titulo-consulta">
-                            {cliente.documentacao}
-                          </div>
-                        </div>
+                        )}
                       </div>
                     </div>
                   </div>
