@@ -8,7 +8,9 @@ import { api } from '../../services/api';
 // Images
 import Check from '../../assets/icones/check.svg';
 import Cartao from '../../assets/cartao.png';
-import Logos from '../../assets/logos.jpg';
+import RendaPara from '../../assets/renda-para.png';
+import Governo from '../../assets/governo.png';
+import Banpara from '../../assets/banpara.png';
 
 // Util
 import { valida_cpf_cnpj, formata_cpf_cnpj } from '../../util/validateCpfCnpj';
@@ -89,7 +91,7 @@ function Main() {
                     &times;
                   </span>
                 </button>
-                <span>Calendário de Pagamento</span>
+                <span>Renda Pará Bolsa Família</span>
               </div>
 
               <div className="col-12 col-lg-8 offset-lg-2 col-xl-4 offset-xl-0 mt-3 p-0 px-xl-2">
@@ -239,34 +241,184 @@ function Main() {
                 </table>
               </div>
             </section>
+            <section className="row">
+              <div className="col-12 subtitulo-renda" style={{ color: '#000' }}>
+                <span>Renda Pará 500</span>
+              </div>
+
+              <div className="col-12 col-lg-8 offset-lg-2 col-xl-4 offset-xl-0 mt-3 p-0 px-xl-2">
+                <table className="table table-condensed table-striped table-responsive-xs mt-3 p-0">
+                  <thead className="text-center header-tabela noborder">
+                    <tr>
+                      <td className="fw-400 text-center align-middle">
+                        Nascidos em
+                      </td>
+                      <td className="fw-400 text-center align-middle">
+                        Dia de Pagamento
+                      </td>
+                    </tr>
+                  </thead>
+                  <tbody className="texto-tabela">
+                    <tr>
+                      <td className="text-center align-middle no-b-top">
+                        Janeiro
+                      </td>
+                      <td className="text-center align-middle no-b-top">
+                        01 a 05 de Abril
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="text-center align-middle no-b-top">
+                        Fevereiro
+                      </td>
+                      <td className="text-center align-middle no-b-top">
+                        06 e 07 de Abril
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="text-center align-middle no-b-top">
+                        Março
+                      </td>
+                      <td className="text-center align-middle no-b-top">
+                        08 e 09 de Abril
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="text-center align-middle no-b-top">
+                        Abril
+                      </td>
+                      <td className="text-center align-middle no-b-top">
+                        12 e 13 de Abril
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div className="col-12 col-lg-8 offset-lg-2 col-xl-4 offset-xl-0 mt-3 p-0 px-xl-2">
+                <table className="table table-condensed table-striped table-responsive-xs mt-3 p-0">
+                  <thead className="text-center header-tabela noborder">
+                    <td className="fw-400 text-center align-middle">
+                      Nascidos em
+                    </td>
+                    <td className="fw-400 text-center align-middle">
+                      Dia de Pagamento
+                    </td>
+                  </thead>
+                  <tbody className="texto-tabela">
+                    <tr>
+                      <td className="text-center align-middle no-b-top">
+                        Maio
+                      </td>
+                      <td className="text-center align-middle no-b-top">
+                        14 e 15 de Abril
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="text-center align-middle no-b-top">
+                        Junho
+                      </td>
+                      <td className="text-center align-middle no-b-top">
+                        16 e 19 de Abril
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="text-center align-middle no-b-top">
+                        Julho
+                      </td>
+                      <td className="text-center align-middle no-b-top">
+                        20 e 22 de Abril
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="text-center align-middle no-b-top">
+                        Agosto
+                      </td>
+                      <td className="text-center align-middle no-b-top">
+                        23 e 26 de Abril
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div className="col-12 col-lg-8 offset-lg-2 col-xl-4 offset-xl-0 mt-3 p-0 px-xl-2">
+                <table className="table table-condensed table-striped table-responsive-xs mt-3 p-0">
+                  <thead className="text-center header-tabela noborder">
+                    <td className="fw-400 text-center align-middle no-b-top">
+                      Nascidos em
+                    </td>
+                    <td className="fw-400 text-center align-middle no-b-top">
+                      Dia de Pagamento
+                    </td>
+                  </thead>
+                  <tbody className="texto-tabela">
+                    <tr className="noborder">
+                      <td className="text-center align-middle no-b-top">
+                        Setembro
+                      </td>
+                      <td className="text-center align-middle no-b-top">
+                        27 de Abril a 03 de Maio
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="text-center align-middle no-b-top">
+                        Outubro
+                      </td>
+                      <td className="text-center align-middle no-b-top">
+                        04 e 05 de Maio
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="text-center align-middle no-b-top">
+                        Novembro
+                      </td>
+                      <td className="text-center align-middle no-b-top">
+                        06 e 07 de Maio
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="text-center align-middle no-b-top">
+                        Dezembro
+                      </td>
+                      <td className="text-center align-middle no-b-top">
+                        10 e 11 de Maio
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
           </div>
         </Modal.Body>
       </Modal>
-      <section className="row py-5 bg-azul-3">
-        <div className="col-12 text-center">
-          <span className="titulo-renda">
-            <b>Renda Pará</b>
-          </span>
+      <section className="row py-5 gd-renda-para">
+        <div className="col-12 p-0 d-flex justify-content-center">
+          <div className="col-8 col-sm-4 col-md-3 col-lg-3 col-xl-2">
+            <img src={RendaPara} alt="renda-para" />
+          </div>
         </div>
 
-        <div className="col-12 subtitulo-renda mt-3">
-          <span>
-            Cota única de R$ <b>100,00</b> para os paraenses do Bolsa Família
-          </span>
+        <div className="col-md-10 offset-md-1 col-lg-8 offset-lg-2 mt-3 texto-descricao-renda-para">
+          O Programa, regulamentado por meio de lei estadual, representa um
+          incremento no orçamento das famílias em situação de vulnerabilidade
+          social, cadastradas no{' '}
+          <span className="font-weight-bold">Bolsa Família</span>. Para cada
+          pessoa beneficiada, é pago o valor de R$ 100, em cota única, em
+          agências do <span className="font-weight-bold">Banpará.</span>
         </div>
-
         <div className="col-12 text-center mt-4">
-          <span className="subtitulo-renda-2">Realizado por:</span>
+          <span className="span-title-consulta">Realizado por:</span>
         </div>
-
-        <div className="col-md-4 offset-md-4 mt-2">
-          <img src={Logos} alt="" />
+        <div className="col-md-4 offset-md-4 text-center">
+          <img src={Governo} className="logo-governo" alt="logo-governo-pará" />
+          <img src={Banpara} className="logo-banpara" alt="logo-banpará" />
         </div>
       </section>
 
       <section className="row faixa-renda">
         <div className="col-12 content-faixa-renda">
-          Consulte a data de pagamento de acordo com o seu mês de aniversário
+          Consulte seu cadastro no Programa
         </div>
       </section>
 
@@ -314,14 +466,14 @@ function Main() {
               <div className="col-md-12 mt-2 text-center">
                 <button
                   onClick={handleInputCpf}
-                  className="btn btn-primary botao-form sombra5"
+                  className="btn btn-primary botao-renda-para sombra5"
                   style={{ marginRight: 10 }}
                 >
                   Consultar
                 </button>
                 <button
                   type="button"
-                  className="btn btn-primary botao-form sombra5"
+                  className="btn btn-primary botao-renda-para sombra5"
                   data-toggle="modal"
                   data-target="#modalCalendario"
                   onClick={handleShow}
@@ -394,6 +546,14 @@ function Main() {
                           <div className="col-12 descricao-consulta">
                             <span className="font-14 fw-400">R$</span>
                             <span style={{ fontSize: 26 }}>100,00</span>
+                          </div>
+                        </div>
+                        <div className="col-md-12 col-lg-8 offset-md-2 alert alert-warning mt-3 p-0 py-3">
+                          <div className="col-12 titulo-consulta font-weight-bold">
+                            DOCUMENTAÇÃO NECESSÁRIA PARA SAQUE:
+                          </div>
+                          <div className="col-12 titulo-consulta">
+                            {cliente.documentacao}
                           </div>
                         </div>
                       </div>
