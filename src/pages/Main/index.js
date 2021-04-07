@@ -539,6 +539,12 @@ function Main() {
                                   parseISO(cliente.dataSaque2),
                                   'dd/MM/yyyy'
                                 )}
+                            {cliente.dataSaque3 &&
+                              'OU ' +
+                                format(
+                                  parseISO(cliente.dataSaque2),
+                                  'dd/MM/yyyy'
+                                )}
                           </div>
                         </div>
 
