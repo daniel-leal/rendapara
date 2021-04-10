@@ -21,6 +21,7 @@ function Main() {
   const [cpf, setCpf] = useState('');
   const [dataNascimento, setDataNascimento] = useState('');
   const [show, setShow] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -43,6 +44,7 @@ function Main() {
     if (!valida_cpf_cnpj(cpf)) return toast.error('O CPF digitado é inválido');
 
     try {
+      setLoading(true);
       const resp = await api.get('/beneficiario', {
         params: {
           cpf: formattedCPf,
@@ -61,6 +63,8 @@ function Main() {
       if (err.response) {
         toast.error(err.response.data.message);
       }
+    } finally {
+      setLoading(false);
     }
   }
 
@@ -113,13 +117,30 @@ function Main() {
               </div>
 
               <div className="col-md-12 mt-2 text-center">
-                <button
-                  onClick={handleInputCpf}
-                  className="btn btn-primary botao-renda-para sombra5"
-                  style={{ marginRight: 10 }}
-                >
-                  Consultar
-                </button>
+                {loading ? (
+                  <button
+                    className="btn btn-primary botao-renda-para sombra5"
+                    type="button"
+                    style={{ marginRight: 10 }}
+                    disabled
+                  >
+                    <span
+                      class="spinner-border spinner-border-sm"
+                      role="status"
+                      aria-hidden="true"
+                    ></span>{' '}
+                    Carregando...
+                  </button>
+                ) : (
+                  <button
+                    onClick={handleInputCpf}
+                    className="btn btn-primary botao-renda-para sombra5"
+                    style={{ marginRight: 10 }}
+                  >
+                    Consultar
+                  </button>
+                )}
+
                 <button
                   type="button"
                   className="btn btn-primary botao-renda-para sombra5"
@@ -218,14 +239,16 @@ function Main() {
                               </div>
                             </div>
 
-                            <div className="col-md-12 col-lg-8 offset-lg-2 alert alert-warning mt-3 p-0 py-3">
-                              <div className="col-12 titulo-consulta font-weight-bold">
-                                DOCUMENTAÇÃO NECESSÁRIA PARA SAQUE:
+                            {!cliente.status.startsWith('Benefício Pago') && (
+                              <div className="col-md-12 col-lg-8 offset-lg-2 alert alert-warning mt-3 p-0 py-3">
+                                <div className="col-12 titulo-consulta font-weight-bold">
+                                  DOCUMENTAÇÃO NECESSÁRIA PARA SAQUE:
+                                </div>
+                                <div className="col-12 titulo-consulta">
+                                  {cliente.documentacao}
+                                </div>
                               </div>
-                              <div className="col-12 titulo-consulta">
-                                {cliente.documentacao}
-                              </div>
-                            </div>
+                            )}
                           </>
                         ) : (
                           <div className="col-md-12 p-o">
