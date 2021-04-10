@@ -239,7 +239,7 @@ function Main() {
                               </div>
                             </div>
 
-                            {!cliente.status.startsWith('Benefício Pago') && (
+                            {cliente.documentacao && (
                               <div className="col-md-12 col-lg-8 offset-lg-2 alert alert-warning mt-3 p-0 py-3">
                                 <div className="col-12 titulo-consulta font-weight-bold">
                                   DOCUMENTAÇÃO NECESSÁRIA PARA SAQUE:
