@@ -3,6 +3,7 @@ import { Modal } from 'react-bootstrap';
 
 import { RendaBF } from './RendaBF';
 import { Renda500 } from './Renda500';
+import { Renda400 } from './Renda400';
 
 export function Calendar({ show, close }) {
   return (
@@ -20,6 +21,7 @@ export function Calendar({ show, close }) {
         <div className="container-fluid justify-content-center">
           <RendaBF close={close} />
           <Renda500 />
+          <Renda400 />
         </div>
       </Modal.Body>
     </Modal>
