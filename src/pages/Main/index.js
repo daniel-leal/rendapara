@@ -129,7 +129,7 @@ function Main() {
                       disabled
                     >
                       <span
-                        class="spinner-border spinner-border-sm"
+                        className="spinner-border spinner-border-sm"
                         role="status"
                         aria-hidden="true"
                       ></span>{' '}
@@ -170,7 +170,8 @@ function Main() {
                               NOME:
                             </div>
                             <div className="col-12 descricao-consulta font-12">
-                              {cliente.nome}
+                              {cliente.nome.split(' ')[0]} *************
+                              *************
                             </div>
                             <div className="col-12 titulo-consulta mt-3">
                               CPF:
@@ -197,27 +198,32 @@ function Main() {
                               </>
                             )}
 
-                            <div className="col-12 titulo-consulta mt-3">
-                              DATA(S) DE PAGAMENTO:
-                            </div>
-                            <div className="col-12 descricao-consulta">
-                              {format(
-                                parseISO(cliente.dataSaque1),
-                                'dd/MM/yyyy'
-                              ) + ' '}
-                              {cliente.dataSaque2 &&
-                                'OU ' +
-                                  format(
-                                    parseISO(cliente.dataSaque2),
+                            {!(cliente.dataSaque1 === '19000101') && (
+                              <>
+                                <div className="col-12 titulo-consulta mt-3">
+                                  DATA(S) DE PAGAMENTO:
+                                </div>
+                                <div className="col-12 descricao-consulta">
+                                  21/07/2021 OU 22/07/2021 OU 23/07/2021
+                                  {/* {format(
+                                    parseISO(cliente.dataSaque1),
                                     'dd/MM/yyyy'
-                                  )}
-                              {cliente.dataSaque3 &&
-                                ' OU ' +
-                                  format(
-                                    parseISO(cliente.dataSaque3),
-                                    'dd/MM/yyyy'
-                                  )}
-                            </div>
+                                  ) + ' '}
+                                  {cliente.dataSaque2 &&
+                                    'OU ' +
+                                      format(
+                                        parseISO(cliente.dataSaque2),
+                                        'dd/MM/yyyy'
+                                      )}
+                                  {cliente.dataSaque3 &&
+                                    ' OU ' +
+                                      format(
+                                        parseISO(cliente.dataSaque3),
+                                        'dd/MM/yyyy'
+                                      )} */}
+                                </div>{' '}
+                              </>
+                            )}
                           </div>
 
                           {cliente.atividade ? (
@@ -243,16 +249,23 @@ function Main() {
                                 </div>
                               </div>
 
-                              {cliente.documentacao && (
-                                <div className="col-md-12 col-lg-8 offset-lg-2 alert alert-warning mt-3 p-0 py-3">
-                                  <div className="col-12 titulo-consulta font-weight-bold">
-                                    DOCUMENTAÇÃO NECESSÁRIA PARA SAQUE:
+                              {cliente.documentacao &&
+                                (cliente.dataSaque1 === '19000101' ? (
+                                  <div className="col-md-12 col-lg-8 offset-lg-2 alert alert-danger mt-3 p-0 py-3">
+                                    <div className="col-12 titulo-consulta">
+                                      {cliente.documentacao}
+                                    </div>
                                   </div>
-                                  <div className="col-12 titulo-consulta">
-                                    {cliente.documentacao}
+                                ) : (
+                                  <div className="col-md-12 col-lg-8 offset-lg-2 alert alert-warning mt-3 p-0 py-3">
+                                    <div className="col-12 titulo-consulta font-weight-bold">
+                                      DOCUMENTAÇÃO NECESSÁRIA PARA SAQUE:
+                                    </div>
+                                    <div className="col-12 titulo-consulta">
+                                      {cliente.documentacao}
+                                    </div>
                                   </div>
-                                </div>
-                              )}
+                                ))}
                             </>
                           ) : (
                             <div className="col-md-12 p-o">

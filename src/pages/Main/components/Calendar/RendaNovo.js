@@ -1,6 +1,6 @@
-import { calendarBf1, calendarBf2, calendarBf3 } from './calendarbf';
+import { calendarNR1, calendarNR2, calendarNR3 } from './calendarNR';
 
-export function RendaBF({ close }) {
+export function RendaNovo({ close }) {
   return (
     <section className="row">
       <div className="col-12 subtitulo-renda" style={{ color: '#000' }}>
@@ -18,10 +18,43 @@ export function RendaBF({ close }) {
             &times;
           </span>
         </button>
-        <span>Renda Pará Bolsa Família</span>
+        <span>Renda Pará</span>
       </div>
 
-      <div className="col-12 col-lg-8 offset-lg-2 col-xl-4 offset-xl-0 mt-3 p-0 px-xl-2">
+      <div className="col-12 col-lg-12 mt-3 p-0 px-xl-2">
+        <table className="table table-condensed table-striped">
+          <thead className="text-center header-tabela noborder">
+            <tr>
+              {/* <th className="fw-400 text-center align-middle">Nascidos em</th> */}
+              <th className="fw-400 text-center align-middle">
+                Dias de Pagamento
+              </th>
+            </tr>
+          </thead>
+          <tbody className="texto-tabela">
+            <tr>
+              {/* <td className="text-center align-middle no-b-top">
+                Todos os meses
+              </td> */}
+              <td className="text-center align-middle no-b-top">
+                21, 22, 23, 26 e 27 de julho
+              </td>
+            </tr>
+            {/* {calendarNR1.map((data) => (
+              <tr>
+                <td className="text-center align-middle no-b-top">
+                  {data.mes}
+                </td>
+                <td className="text-center align-middle no-b-top">
+                  {data.saque}
+                </td>
+              </tr>
+            ))} */}
+          </tbody>
+        </table>
+      </div>
+
+      {/* <div className="col-12 col-lg-8 offset-lg-2 col-xl-4 offset-xl-0 mt-3 p-0 px-xl-2">
         <table className="table table-condensed table-striped table-responsive-xs mt-3 p-0">
           <thead className="text-center header-tabela noborder">
             <tr>
@@ -32,7 +65,7 @@ export function RendaBF({ close }) {
             </tr>
           </thead>
           <tbody className="texto-tabela">
-            {calendarBf1.map((data) => (
+            {calendarNR2.map((data) => (
               <tr>
                 <td className="text-center align-middle no-b-top">
                   {data.mes}
@@ -44,34 +77,9 @@ export function RendaBF({ close }) {
             ))}
           </tbody>
         </table>
-      </div>
+      </div> */}
 
-      <div className="col-12 col-lg-8 offset-lg-2 col-xl-4 offset-xl-0 mt-3 p-0 px-xl-2">
-        <table className="table table-condensed table-striped table-responsive-xs mt-3 p-0">
-          <thead className="text-center header-tabela noborder">
-            <tr>
-              <th className="fw-400 text-center align-middle">Nascidos em</th>
-              <th className="fw-400 text-center align-middle">
-                Dia de Pagamento
-              </th>
-            </tr>
-          </thead>
-          <tbody className="texto-tabela">
-            {calendarBf2.map((data) => (
-              <tr>
-                <td className="text-center align-middle no-b-top">
-                  {data.mes}
-                </td>
-                <td className="text-center align-middle no-b-top">
-                  {data.saque}
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-
-      <div className="col-12 col-lg-8 offset-lg-2 col-xl-4 offset-xl-0 mt-3 p-0 px-xl-2">
+      {/* <div className="col-12 col-lg-8 offset-lg-2 col-xl-4 offset-xl-0 mt-3 p-0 px-xl-2">
         <table className="table table-condensed table-striped table-responsive-xs mt-3 p-0">
           <thead className="text-center header-tabela noborder">
             <tr>
@@ -84,7 +92,7 @@ export function RendaBF({ close }) {
             </tr>
           </thead>
           <tbody className="texto-tabela">
-            {calendarBf3.map((data) => (
+            {calendarNR3.map((data) => (
               <tr>
                 <td className="text-center align-middle no-b-top">
                   {data.mes}
@@ -96,7 +104,7 @@ export function RendaBF({ close }) {
             ))}
           </tbody>
         </table>
-      </div>
+      </div> */}
     </section>
   );
 }
